@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", sans-serif;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  margin-top: 1em;
+}
+
+.title p {
+  font-size: 2.2rem;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(12em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  gap: 2em;
+  justify-items: center;
+  margin: 5em 10em;
+}
+
+.gallery img {
+  max-width: 100%;
+  border: 1px solid black;
+}
+
+@media (max-width: 739px) {
+  .gallery {
+    -ms-grid-columns: (minmax(8em, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(8em, 1fr));
+    margin: 2em 1em;
+  }
+}
+
+@media (max-width: 410px) {
+  .title p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .gallery {
+    margin-top: 1em 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1150px) {
+  .gallery {
+    -ms-grid-columns: (minmax(12em, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(12em, 1fr));
+  }
+}
+/*# sourceMappingURL=style.css.map */
